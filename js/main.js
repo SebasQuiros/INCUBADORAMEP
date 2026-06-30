@@ -42,7 +42,7 @@
   var TOPICS = {
     postular: {
       subject: 'Quiero postular mi proyecto a INEA',
-      body: 'Hola Nelson, soy estudiante/egresado(a) de la zona y me gustaría postular mi proyecto a la Incubadora de Negocios de Alajuela (INEA). ¿Me podrías indicar los requisitos y los pasos para aplicar? ¡Gracias!'
+      body: 'Hola Nelson, soy estudiante/egresado(a) de la zona y me gustaría postular mi proyecto a la Incubadora de Negocios de Alajuela (INEA). ¿Me podría indicar los requisitos y los pasos para aplicar? ¡Gracias!'
     },
     mentor: {
       subject: 'Me interesa ser mentor(a) de INEA',
@@ -50,7 +50,7 @@
     },
     info: {
       subject: 'Consulta sobre INEA',
-      body: 'Hola Nelson, quisiera más información sobre la Incubadora de Negocios de Alajuela (INEA). ¿Me podrías ayudar? ¡Gracias!'
+      body: 'Hola Nelson, quisiera más información sobre la Incubadora de Negocios de Alajuela (INEA). ¿Me podría ayudar? ¡Gracias!'
     }
   };
 
@@ -120,7 +120,7 @@
         v.muted = !v.muted;
         if (!v.muted && v.paused) v.play().catch(function () {});
         if (badge) {
-          badge.textContent = v.muted ? '🔇 Toca para activar el sonido' : '🔊 Sonido activado';
+          badge.textContent = v.muted ? '🔇 Toque para activar el sonido' : '🔊 Sonido activado';
           if (!v.muted) frame.classList.add('sound-on');
           else frame.classList.remove('sound-on');
         }
