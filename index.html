@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Incubadora de Negocios de Alajuela (INEA) — Programa del Ministerio de Educación Pública que impulsa el emprendimiento juvenil en Alajuela, Poás, Grecia, Atenas, Orotina y San Mateo." />
+  <meta name="theme-color" content="#0f2c52" />
+  <title>INEA — Incubadora de Negocios de Alajuela | MEP</title>
+
+  <!-- Open Graph (para compartir en redes) -->
+  <meta property="og:title" content="INEA — Incubadora de Negocios de Alajuela" />
+  <meta property="og:description" content="Aquí nacen las grandes ideas de nuestra región. Súmate como mentor(a), persona experta o emprendedor(a)." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO / NAV ===== -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand" aria-label="Inicio INEA">
+        <img src="img/logo-inea.svg" alt="Logo INEA" class="brand-logo"
+             onerror="this.replaceWith(document.getElementById('inea-fallback').content.cloneNode(true))" />
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="navMenu" aria-label="Navegación principal">
+        <a href="#estudiantes">Para estudiantes</a>
+        <a href="#que-es">¿Qué es?</a>
+        <a href="#video">Video</a>
+        <a href="#mentor">Ser Mentor(a)</a>
+        <a href="#junta">Junta Asesora</a>
+        <a href="#contacto" class="nav-cta">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Fallback de logo INEA en texto si la imagen no carga -->
+  <template id="inea-fallback">
+    <span class="logo-text-fallback"><strong>INEA</strong><small>Incubadora de Negocios de Alajuela</small></span>
+  </template>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-deco" aria-hidden="true">
+        <svg viewBox="0 0 120 120" class="deco-rocket">
+          <path d="M60 8c14 8 22 24 22 44 0 10-3 18-8 26l-14 10-14-10c-5-8-8-16-8-26C38 32 46 16 60 8z" fill="none" stroke="#37c2c4" stroke-width="3"/>
+          <circle cx="60" cy="46" r="10" fill="none" stroke="#37c2c4" stroke-width="3"/>
+          <path d="M46 88l-8 18 14-8M74 88l8 18-14-8" fill="none" stroke="#f6921e" stroke-width="3"/>
+        </svg>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-org">
+          <img src="img/logo-mep.png" alt="Ministerio de Educación Pública" class="hero-org-logo"
+               onerror="this.onerror=null; this.src='img/logo-mep.svg';" />
+          <span class="hero-org-text">Ministerio de Educación Pública · Gobierno de Costa Rica</span>
+        </div>
+
+        <h1 class="hero-title">
+          Aquí nacen las <span class="grad">grandes ideas</span><br />de nuestra región
+        </h1>
+        <p class="hero-sub">
+          La <strong>Incubadora de Negocios de Alajuela (INEA)</strong> impulsa el emprendimiento
+          juvenil, convirtiendo a los egresados en protagonistas de las soluciones que el mercado
+          y la sociedad demandan.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#estudiantes" class="btn btn-primary">Soy estudiante, quiero incubar mi idea</a>
+          <a href="#mentor" class="btn btn-outline">Quiero ser mentor(a)</a>
+        </div>
+
+        <ul class="hero-cantones" aria-label="Cantones que abarca INEA">
+          <li>Alajuela</li><li>Poás</li><li>Grecia</li>
+          <li>Atenas</li><li>Orotina</li><li>San Mateo</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== PARA ESTUDIANTES (protagonistas) ===== -->
+    <section class="section section-students" id="estudiantes">
+      <div class="container">
+        <div class="students-head">
+          <span class="eyebrow">Esto es para vos</span>
+          <h2 class="section-title">¿Sos estudiante o egresado? Aquí nace tu negocio</h2>
+          <p class="section-lead">
+            En INEA vos sos el protagonista. Si tenés una idea —o ganas de tener una— te
+            acompañamos para convertirla en un negocio real, en un entorno seguro y con
+            apoyo de expertos. <strong>Gratis y cerca de tu cantón.</strong>
+          </p>
+        </div>
+
+        <!-- ¿Esto es para mí? -->
+        <div class="students-who">
+          <h3 class="students-sub">¿Esto es para mí? Sí, si sos…</h3>
+          <div class="who-chips">
+            <span class="who-chip">🎓 Estudiante de Duodécimo o Tercer Nivel</span>
+            <span class="who-chip">📜 Egresado de Liceo o Colegio Académico</span>
+            <span class="who-chip">🛠️ Egresado de CTP, IPEC o CINDEAS</span>
+            <span class="who-chip">📍 De Alajuela, Poás, Grecia, Atenas, Orotina o San Mateo</span>
+          </div>
+        </div>
+
+        <!-- Qué ganás -->
+        <h3 class="students-sub">¿Qué ganás al participar?</h3>
+        <div class="benefits-grid">
+          <article class="benefit">
+            <div class="benefit-ico">🚀</div>
+            <h4>Hacés realidad tu idea</h4>
+            <p>Convertís un proyecto de clase o un sueño en un negocio que funciona.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-ico">🧑‍🏫</div>
+            <h4>Mentores que te guían</h4>
+            <p>Empresarios con experiencia te acompañan paso a paso, sin costo.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-ico">📚</div>
+            <h4>Capacitación práctica</h4>
+            <p>Aprendés a vender, manejar dinero y producir, con asistencia técnica real.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-ico">🛡️</div>
+            <h4>Entorno seguro</h4>
+            <p>Probás y te equivocás en un espacio diseñado para que aprendas sin riesgo.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-ico">💼</div>
+            <h4>Generás empleo</h4>
+            <p>Te convertís en empresario joven y dinamizás la economía de tu comunidad.</p>
+          </article>
+          <article class="benefit">
+            <div class="benefit-ico">🤝</div>
+            <h4>Red de contactos</h4>
+            <p>Conectás con otros emprendedores, expertos y aliados de la región.</p>
+          </article>
+        </div>
+
+        <!-- Cómo es el proceso -->
+        <h3 class="students-sub">¿Cómo es el proceso? 4 pasos</h3>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">1</span>
+            <h4>Postulás tu idea</h4>
+            <p>Nos contás qué querés emprender. No importa si todavía es solo una idea.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">2</span>
+            <h4>Selección</h4>
+            <p>El Comité Experto evalúa los proyectos y elige los que entran a incubación.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">3</span>
+            <h4>Incubación</h4>
+            <p>Recibís capacitación, mentoría y acompañamiento para desarrollar tu negocio.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">4</span>
+            <h4>¡Despegás!</h4>
+            <p>Lanzás tu emprendimiento al mercado como un nuevo empresario de la región.</p>
+          </li>
+        </ol>
+
+        <!-- Video de requisitos para postular -->
+        <h3 class="students-sub">Requisitos para postular tu proyecto</h3>
+        <p class="students-video-lead">Mirá este video antes de aplicar: te explica todo lo que necesitás para participar.</p>
+        <div class="video-frame video-frame--portrait">
+          <video class="auto-video" muted playsinline loop preload="metadata" controls>
+            <source src="videos/requisitos.mp4" type="video/mp4" />
+            Tu navegador no soporta video.
+          </video>
+          <span class="video-unmute" aria-hidden="true">🔇 Toca para activar el sonido</span>
+        </div>
+
+        <div class="video-wa-cta">
+          <p>¿Listo para postular? Escribinos y te ayudamos con tu proyecto.</p>
+          <a class="btn btn-wa" data-wa-topic="postular" target="_blank" rel="noopener">
+            <span aria-hidden="true">🟢</span> Postular mi proyecto por WhatsApp
+          </a>
+        </div>
+
+        <div class="cta-band cta-students">
+          <p>Tu momento de emprender es <strong>ahora</strong>. Dá el primer paso.</p>
+          <a href="#contacto" class="btn btn-primary js-set-topic" data-topic="postular">Quiero postular mi idea</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ¿QUÉ ES INEA? ===== -->
+    <section class="section" id="que-es">
+      <div class="container">
+        <span class="eyebrow">El motor de innovación de la región</span>
+        <h2 class="section-title">¿Qué es una incubadora de negocios?</h2>
+        <div class="que-grid">
+          <div class="que-text">
+            <p>
+              Es una entidad que propicia el desarrollo de ideas de negocios, promoviendo la
+              ejecución de proyectos productivos que permitan incorporar a los jóvenes como
+              empresarios. Proporciona <strong>acompañamiento, capacitación y asistencia técnica</strong>
+              para la creación de nuevas empresas.
+            </p>
+            <p>
+              Nacida en <strong>junio de 2026</strong> bajo el respaldo del Ministerio de Educación
+              Pública, INEA tiene su epicentro en el <strong>CTP de Carrizal, Alajuela</strong>: un
+              verdadero laboratorio de creatividad regional que conecta de forma directa con los
+              egresados para empoderarlos como agentes de transformación.
+            </p>
+          </div>
+
+          <div class="que-cards">
+            <article class="mini-card">
+              <div class="mini-ico">🎯</div>
+              <h3>Asistencia técnica y capacitación</h3>
+              <p>Materializamos tus ideas en un entorno controlado y diseñado para el éxito.</p>
+            </article>
+            <article class="mini-card">
+              <div class="mini-ico">🤝</div>
+              <h3>Acompañamiento estratégico</h3>
+              <p>Guía constante en cada etapa del proceso de incubación de tu proyecto.</p>
+            </article>
+            <article class="mini-card">
+              <div class="mini-ico">⭐</div>
+              <h3>Respaldo de alto nivel</h3>
+              <p>Una Junta Asesora con mística, ética, equidad de género y dominio del ecosistema emprendedor.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VIDEO INEA ===== -->
+    <section class="section section-alt" id="video">
+      <div class="container">
+        <span class="eyebrow">Conocé INEA</span>
+        <h2 class="section-title">Mirá de qué se trata</h2>
+        <p class="section-lead">
+          Un vistazo a la Incubadora de Negocios de Alajuela y a las grandes ideas que nacen en nuestra región.
+        </p>
+
+        <!-- El video arranca solo (sin sonido) al entrar en pantalla. Archivo: videos/inea.mp4 -->
+        <div class="video-frame">
+          <video class="auto-video" muted playsinline loop preload="metadata" controls>
+            <source src="videos/inea.mp4" type="video/mp4" />
+            Tu navegador no soporta video.
+          </video>
+          <span class="video-unmute" aria-hidden="true">🔇 Toca para activar el sonido</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== QUIÉNES PARTICIPAN ===== -->
+    <section class="section section-alt" id="participan">
+      <div class="container">
+        <span class="eyebrow">El proceso de incubación</span>
+        <h2 class="section-title">¿Quiénes participan?</h2>
+        <p class="section-lead">
+          Jóvenes de la zona con vocación emprendedora y deseos de iniciar su propio negocio.
+        </p>
+
+        <div class="cards-3">
+          <article class="card">
+            <div class="card-ico">💡</div>
+            <h3>Egresados de Liceos y Colegios Académicos</h3>
+            <p>Jóvenes de liceos y colegios académicos de la zona, con ideas y proyectos emprendedores.</p>
+          </article>
+          <article class="card">
+            <div class="card-ico">🎓</div>
+            <h3>Estudiantes de Duodécimo o Tercer Nivel</h3>
+            <p>Estudiantes activos en su último año de secundaria con vocación emprendedora.</p>
+          </article>
+          <article class="card">
+            <div class="card-ico">🛠️</div>
+            <h3>Egresados de CTP, IPEC y CINDEAS</h3>
+            <p>Jóvenes con formación técnica que desean aplicar sus conocimientos en nuevas empresas productivas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SER MENTOR(A) ===== -->
+    <section class="section" id="mentor">
+      <div class="container">
+        <span class="eyebrow">Voluntariado</span>
+        <h2 class="section-title">¿Quiere usted ser mentor(a) de INEA?</h2>
+        <p class="section-lead">
+          Únase como voluntario(a) y transforme el futuro empresarial de los jóvenes de Alajuela.
+          Su experiencia puede cambiar vidas.
+        </p>
+
+        <div class="feature-list">
+          <div class="feature">
+            <h3>Conocimientos y experiencia en negocios</h3>
+            <p>Poseen conocimientos y experiencias en negocios que desean compartir con la siguiente generación de emprendedores.</p>
+          </div>
+          <div class="feature">
+            <h3>Comparten experiencias y conocimientos</h3>
+            <p>Comparten activamente sus experiencias con jóvenes emprendedores para guiarlos en su camino.</p>
+          </div>
+          <div class="feature">
+            <h3>Apoyo al emprendimiento joven</h3>
+            <p>Quieren conocer y apoyar a un(a) emprendedor(a) y tienen excelentes habilidades de comunicación y liderazgo.</p>
+          </div>
+          <div class="feature">
+            <h3>Habilidades de comunicación</h3>
+            <p>Poseen buenas habilidades de comunicación, escucha activa y capacidad para motivar e inspirar a jóvenes con potencial empresarial.</p>
+          </div>
+        </div>
+
+        <div class="cta-band">
+          <p>¿Le interesa ser mentor(a)? Contáctenos y forme parte del cambio.</p>
+          <a href="#contacto" class="btn btn-primary js-set-topic" data-topic="mentor">Quiero participar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== JUNTA ASESORA (informativa) ===== -->
+    <section class="section section-dark" id="junta">
+      <div class="container">
+        <span class="eyebrow eyebrow-light">Respaldo de alto nivel</span>
+        <h2 class="section-title">Contamos con una Junta Asesora</h2>
+        <p class="section-lead">
+          INEA cuenta con una <strong>Junta Asesora ya conformada</strong>: profesionales y empresarios
+          comprometidos con el desarrollo económico local, caracterizados por su mística, ética,
+          equidad de género y un dominio absoluto del ecosistema emprendedor. Su experiencia es clave
+          para guiar a los jóvenes emprendedores hacia el éxito.
+        </p>
+
+        <div class="junta-grid">
+          <div class="junta-block">
+            <h3>¿Qué hace la Junta Asesora?</h3>
+            <p>
+              Actúa como <strong>Comité Experto</strong>: es el órgano responsable de la calificación y
+              selección de los proyectos en el proceso de reclutamiento, y acompaña estratégicamente a
+              los emprendedores durante la incubación.
+            </p>
+          </div>
+          <div class="junta-block">
+            <h3>Perfil de sus integrantes</h3>
+            <ul class="check-list">
+              <li>Conocimiento en emprendimientos y negocios.</li>
+              <li>Experiencia comprobada en emprendimiento.</li>
+              <li>Manejo de contabilidad, finanzas y producción.</li>
+              <li>Empresarios de la zona con conocimiento del mercado.</li>
+              <li>Dominio del ecosistema comercial local.</li>
+              <li>Compromiso, ética y equidad de género.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="junta-stats">
+          <div class="jstat"><span class="jstat-ico">⭐</span><div><strong>Mística y ética</strong><small>Valores que guían cada decisión</small></div></div>
+          <div class="jstat"><span class="jstat-ico">⚖️</span><div><strong>Equidad de género</strong><small>Una junta diversa y equilibrada</small></div></div>
+          <div class="jstat"><span class="jstat-ico">🌐</span><div><strong>Dominio del ecosistema</strong><small>Conocimiento real del mercado local</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="section section-alt" id="contacto">
+      <div class="container">
+        <span class="eyebrow">Su momento de emprender es ahora</span>
+        <h2 class="section-title">Contacto</h2>
+        <p class="section-lead">
+          La invitación está hecha. Súmese a la experiencia INEA y lidere el cambio que su cantón necesita.
+        </p>
+
+        <div class="contact-card">
+          <div class="contact-person">
+            <div class="contact-avatar">NC</div>
+            <div>
+              <h3>Nelson Campos Vega</h3>
+              <span class="contact-role">Administrador · Incubadora de Negocios de Alajuela (INEA)</span>
+            </div>
+          </div>
+          <div class="contact-links">
+            <a href="tel:+50671656006" class="contact-link">
+              <span class="ci">📞</span><span>7165-6006</span>
+            </a>
+            <a href="mailto:nelson.campos.vega@mep.go.cr" class="contact-link">
+              <span class="ci">✉️</span><span>nelson.campos.vega@mep.go.cr</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Escribinos: el mensaje se arma según el tema elegido -->
+        <div class="contact-write">
+          <p class="cw-label">Escribinos directamente. ¿Sobre qué querés consultar?</p>
+          <div class="cw-options" id="cwOptions" role="group" aria-label="Tema de la consulta">
+            <button type="button" class="cw-opt is-active" data-topic="postular">🚀 Postular mi proyecto</button>
+            <button type="button" class="cw-opt" data-topic="mentor">🧑‍🏫 Ser mentor(a)</button>
+            <button type="button" class="cw-opt" data-topic="info">💬 Información general</button>
+          </div>
+          <div class="cw-actions">
+            <a id="waBtn" class="btn btn-wa" target="_blank" rel="noopener">
+              <span aria-hidden="true">🟢</span> Escribir por WhatsApp
+            </a>
+            <a id="mailBtn" class="btn btn-primary">
+              <span aria-hidden="true">✉️</span> Enviar correo
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== PIE ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="img/logo-inea.svg" alt="INEA" class="footer-logo footer-logo-mark" onerror="this.style.display='none'" />
+        <p>Incubadora de Negocios de Alajuela — Un programa del Ministerio de Educación Pública.</p>
+      </div>
+      <div class="footer-meta">
+        <p>CTP Carrizal, Alajuela · Costa Rica</p>
+        <p>© <span id="year"></span> INEA · MEP. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" id="backTop" aria-label="Volver arriba">↑</a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Config local del preview de Claude (no es parte de la web)
+.claude/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

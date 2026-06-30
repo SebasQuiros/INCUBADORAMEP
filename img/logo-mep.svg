@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 360" role="img" aria-label="Ministerio de Educación Pública">
+  <style>
+    .mep-mark { font-family: 'Poppins','Arial Black',sans-serif; font-weight: 800; }
+    .mep-txt  { font-family: 'Poppins','Arial',sans-serif; font-weight: 700; }
+  </style>
+
+  <!-- punto de la í -->
+  <circle cx="40" cy="36" r="24" fill="#111"/>
+  <!-- punto azul accent -->
+  <circle cx="232" cy="118" r="40" fill="#1aa3e0"/>
+  <!-- bowl amarillo de la p -->
+  <path d="M372 118 a52 52 0 0 1 0 104 Z" fill="#f5b800"/>
+
+  <!-- wordmark ímep -->
+  <text x="14" y="232" class="mep-mark" font-size="210" fill="#111" letter-spacing="-6">ímep</text>
+
+  <!-- texto institucional -->
+  <text x="16" y="296" class="mep-txt" font-size="46" fill="#111">Ministerio</text>
+  <text x="16" y="344" class="mep-txt" font-size="46" fill="#111">de Educación Pública</text>
+</svg>

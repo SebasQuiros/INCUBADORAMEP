@@ -1,0 +1,71 @@
+INEA — Incubadora de Negocios de Alajuela (MEP)
+================================================
+
+CÓMO VER LA PÁGINA
+------------------
+Haga doble clic en "index.html". Se abre en cualquier navegador.
+No necesita servidor ni instalar nada.
+
+
+LOGOS (YA INCLUIDOS)
+--------------------
+La página YA trae los dos logos hechos en formato vectorial (SVG):
+
+   img/logo-inea.svg   <-- logo de INEA (montaña + texto)
+   img/logo-mep.svg    <-- logo del Ministerio de Educación Pública (ímep)
+
+Son versiones recreadas que se ven nítidas en cualquier tamaño.
+
+¿Tiene los logos OFICIALES en imagen (PNG/JPG)? Puede reemplazarlos así:
+1. Guarde su imagen en la carpeta "img".
+2. En "index.html" busque "logo-inea.svg" o "logo-mep.svg" y cambie el
+   nombre por el de su archivo (ej. logo-inea.png). Aparece 2-3 veces.
+3. Recargue la página.
+
+Consejo: para el encabezado use PNG con fondo transparente.
+
+
+ESTRUCTURA DE ARCHIVOS
+----------------------
+index.html        -> la página
+css/styles.css    -> estilos / colores
+js/main.js        -> menú móvil y detalles
+img/              -> aquí van los logos
+
+
+PUBLICAR EN INTERNET (opcional, gratis)
+---------------------------------------
+- Netlify Drop: arrastre toda la carpeta a https://app.netlify.com/drop
+- GitHub Pages, o cualquier hosting que tenga el MEP.
+
+
+LOS DOS VIDEOS (¡IMPORTANTE!)
+-----------------------------
+La página YA está lista para DOS videos que se reproducen SOLOS (sin sonido)
+cuando la persona baja y llegan a la pantalla. Solo tenés que copiar tus
+archivos en la carpeta "videos" con EXACTAMENTE estos nombres:
+
+   videos/inea.mp4         <-- video de "qué es INEA / de qué trata"
+                               (aparece en la sección "Video / Conocé INEA")
+
+   videos/requisitos.mp4   <-- video de requisitos para postular un proyecto
+                               (aparece en la sección "Para estudiantes")
+
+PASOS:
+   1. Abrí la carpeta:  PAGINA MEP\videos
+   2. Copiá tus dos videos ahí.
+   3. Renombralos a  inea.mp4  y  requisitos.mp4
+   4. Recargá la página (Ctrl+F5).
+
+NOTAS:
+   - Formato recomendado: .mp4 (H.264). Es el que reproducen todos los navegadores.
+   - Arrancan SIN sonido (así lo exigen los navegadores para el autoplay).
+     La persona hace CLIC sobre el video para activar el sonido.
+   - Si su archivo es .mov o .avi, conviértalo a .mp4 antes (cualquier
+     conversor en línea sirve), o avíseme y ajusto el código.
+
+
+EDITAR DATOS DE CONTACTO
+------------------------
+Están en index.html, sección "CONTACTO":
+   Nombre, teléfono 7165-6006 y correo nelson.campos.vega@mep.go.cr
