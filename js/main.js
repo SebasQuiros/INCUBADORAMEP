@@ -2,6 +2,12 @@
 (function () {
   'use strict';
 
+  // --- Siempre iniciar arriba (evita que el navegador restaure la posición) ---
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.scrollTo(0, 0);
+  window.addEventListener('load', function () { window.scrollTo(0, 0); });
+  window.addEventListener('pageshow', function (e) { if (e.persisted) window.scrollTo(0, 0); });
+
   // --- Menú móvil ---
   var toggle = document.getElementById('navToggle');
   var menu = document.getElementById('navMenu');
