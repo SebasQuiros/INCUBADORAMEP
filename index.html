@@ -23,8 +23,8 @@
   <header class="site-header" id="top">
     <div class="container nav-wrap">
       <a href="#top" class="brand" aria-label="Inicio INEA">
-        <img src="img/logo-inea.svg" alt="Logo INEA" class="brand-logo"
-             onerror="this.replaceWith(document.getElementById('inea-fallback').content.cloneNode(true))" />
+        <img src="img/logo-inea.png" alt="Logo INEA" class="brand-logo"
+             onerror="this.onerror=null; this.src='img/logo-inea.svg';" />
       </a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
@@ -77,6 +77,7 @@
 
         <div class="hero-actions">
           <a href="#estudiantes" class="btn btn-primary">Soy estudiante, quiero incubar mi idea</a>
+          <a href="#estudiantes" class="btn btn-primary">Soy egresado(a), quiero incubar mi idea</a>
           <a href="#mentor" class="btn btn-outline">Quiero ser mentor(a)</a>
         </div>
 
@@ -96,7 +97,7 @@
           <p class="section-lead">
             En INEA usted es el protagonista. Si tiene una idea —o ganas de tener una— le
             acompañamos para convertirla en un negocio real, en un entorno seguro y con
-            apoyo de expertos. <strong>Gratis y cerca de su cantón.</strong>
+            apoyo de expertos.
           </p>
         </div>
 
@@ -132,7 +133,7 @@
           <article class="benefit">
             <div class="benefit-ico">🛡️</div>
             <h4>Entorno seguro</h4>
-            <p>Prueba y se equivoca en un espacio diseñado para que aprenda sin riesgo.</p>
+            <p>Un espacio diseñado para aprender a gestionar los riesgos.</p>
           </article>
           <article class="benefit">
             <div class="benefit-ico">💼</div>
@@ -226,7 +227,7 @@
             <article class="mini-card">
               <div class="mini-ico">🤝</div>
               <h3>Acompañamiento estratégico</h3>
-              <p>Guía constante en cada etapa del proceso de incubación de su proyecto.</p>
+              <p>Guía constante en cada etapa del proceso de su proyecto.</p>
             </article>
             <article class="mini-card">
               <div class="mini-ico">⭐</div>
@@ -235,6 +236,66 @@
             </article>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== SIGNIFICADO DE INEA ===== -->
+    <section class="section section-alt" id="significa">
+      <div class="container">
+        <span class="eyebrow">Nuestra identidad</span>
+        <h2 class="section-title">¿Qué significa INEA?</h2>
+        <p class="section-lead">
+          <strong>INEA</strong> significa <strong>Incubadora de Negocios de Alajuela</strong>. Su logo
+          refleja la identidad, el arraigo y la energía transformadora de nuestra región.
+        </p>
+
+        <div class="meaning-grid">
+          <div class="meaning-logo">
+            <img src="img/logo-inea.png" alt="Logo INEA — Incubadora de Negocios de Alajuela"
+                 onerror="this.onerror=null; this.src='img/logo-inea.svg';" />
+          </div>
+
+          <ul class="meaning-list">
+            <li>
+              <span class="meaning-ico">⛰️</span>
+              <div>
+                <h4>Las montañas</h4>
+                <p>Simbolizan el relieve local, el arraigo y el entorno geográfico a espaldas de la institución.</p>
+              </div>
+            </li>
+            <li>
+              <span class="meaning-ico">🌋</span>
+              <div>
+                <h4>La fumarola</h4>
+                <p>Evoca al Volcán Poás como ícono de identidad, fuerza latente y energía transformadora.</p>
+              </div>
+            </li>
+            <li>
+              <span class="meaning-ico meaning-ico--green">🌱</span>
+              <div>
+                <h4>El color verde (I)</h4>
+                <p>Representa el compromiso con la sostenibilidad ambiental y el desarrollo ecológico.</p>
+              </div>
+            </li>
+            <li>
+              <span class="meaning-ico meaning-ico--yellow">💡</span>
+              <div>
+                <h4>El color amarillo (A)</h4>
+                <p>Simboliza el ingenio, el nacimiento de las ideas y la innovación empresarial.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <p class="meaning-credits">
+          <span class="mc-star">🏅</span>
+          <span>
+            <strong>Agradecimiento especial</strong> por la elaboración del logo a
+            <strong>Jorge Wilson Azofeifa Bolívar</strong>, profesor de Dibujo Técnico,
+            y a sus estudiantes <strong>Stacy</strong>, <strong>Saray</strong> y
+            <strong>Avril J.</strong> de la Sección 11-6.
+          </span>
+        </p>
       </div>
     </section>
 
@@ -452,12 +513,21 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="img/logo-inea.svg" alt="INEA" class="footer-logo footer-logo-mark" onerror="this.style.display='none'" />
+        <img src="img/logo-inea.png" alt="INEA" class="footer-logo" onerror="this.onerror=null; this.src='img/logo-inea.svg';" />
         <p>Incubadora de Negocios de Alajuela — Un programa del Ministerio de Educación Pública.</p>
       </div>
       <div class="footer-meta">
         <p>CTP Carrizal, Alajuela · Costa Rica</p>
         <p>© <span id="year"></span> INEA · MEP. Todos los derechos reservados.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="footer-credit">
+        <img src="img/sjqa.png" alt="SJQA GROUP" class="dev-logo" onerror="this.style.display='none'" />
+        <span class="dev-text">
+          Desarrollado por <strong>SJQA GROUP</strong> · Ing. Gonzalo Esquivel · Dirigencia: Sebastián Quirós Arroyo
+        </span>
       </div>
     </div>
   </footer>

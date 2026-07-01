@@ -66,7 +66,7 @@ a { color: inherit; text-decoration: none; }
 }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; min-height: 72px; }
 .brand { display: flex; align-items: center; }
-.brand-logo { height: 46px; width: auto; }
+.brand-logo { height: 52px; width: auto; }
 .logo-text-fallback { display: flex; flex-direction: column; line-height: 1; }
 .logo-text-fallback strong { font-family: 'Poppins'; font-size: 1.6rem; color: var(--navy); letter-spacing: 1px; }
 .logo-text-fallback small { font-size: .56rem; color: var(--muted); letter-spacing: .5px; text-transform: uppercase; }
@@ -202,7 +202,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ===== ¿QUÉ ES? ===== */
 .que-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: start; }
-.que-text p { margin-bottom: 18px; color: #404b5a; font-size: 1.04rem; }
+.que-text p { margin-bottom: 18px; color: #404b5a; font-size: 1.04rem; text-align: justify; }
 .que-cards { display: grid; gap: 16px; }
 .mini-card {
   background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
@@ -213,6 +213,33 @@ a { color: inherit; text-decoration: none; }
 .mini-ico { font-size: 1.7rem; line-height: 1; }
 .mini-card h3 { font-size: 1.05rem; margin-bottom: 4px; }
 .mini-card p { font-size: .94rem; color: var(--muted); }
+
+/* ===== SIGNIFICADO DE INEA ===== */
+.meaning-grid {
+  display: grid; grid-template-columns: .9fr 1.1fr; gap: 44px; align-items: center; margin-bottom: 36px;
+}
+.meaning-logo {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 30px; display: grid; place-items: center; box-shadow: var(--shadow);
+}
+.meaning-logo img { max-width: 100%; max-height: 300px; }
+.meaning-list { list-style: none; display: grid; gap: 20px; }
+.meaning-list li { display: flex; gap: 16px; align-items: flex-start; }
+.meaning-ico {
+  flex-shrink: 0; width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center;
+  font-size: 1.6rem; background: linear-gradient(135deg, rgba(58,74,90,.12), rgba(58,74,90,.05));
+}
+.meaning-ico--green { background: linear-gradient(135deg, rgba(90,164,50,.20), rgba(90,164,50,.06)); }
+.meaning-ico--yellow { background: linear-gradient(135deg, rgba(245,184,0,.22), rgba(245,184,0,.07)); }
+.meaning-list h4 { font-family: 'Poppins'; font-size: 1.1rem; color: var(--navy); margin-bottom: 3px; }
+.meaning-list p { color: var(--muted); font-size: .96rem; }
+.meaning-credits {
+  display: flex; gap: 14px; align-items: center; background: #fff;
+  border: 1px solid var(--line); border-left: 4px solid var(--orange); border-radius: var(--radius);
+  padding: 20px 24px; color: #404b5a; font-size: .98rem; box-shadow: var(--shadow);
+}
+.meaning-credits .mc-star { font-size: 1.6rem; flex-shrink: 0; }
+.meaning-credits strong { color: var(--navy); }
 
 /* ===== VIDEO ===== */
 .video-frame {
@@ -360,7 +387,9 @@ a { color: inherit; text-decoration: none; }
   transition: background .18s, transform .15s; color: var(--ink);
 }
 a.contact-link:hover { background: #e9eff7; transform: translateX(3px); }
-.contact-link .ci { font-size: 1.2rem; }
+.contact-link { min-width: 0; }
+.contact-link span { overflow-wrap: anywhere; word-break: break-word; min-width: 0; }
+.contact-link .ci { font-size: 1.2rem; flex-shrink: 0; }
 
 /* bloque "escribinos" (ocupa todo el ancho de la tarjeta) */
 .contact-write {
@@ -383,10 +412,23 @@ a.contact-link:hover { background: #e9eff7; transform: translateX(3px); }
 .site-footer { background: var(--navy-deep); color: #c5d1e4; padding: 50px 0 36px; }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; }
 .footer-brand { max-width: 460px; }
-.footer-logo { height: 44px; margin-bottom: 14px; filter: brightness(0) invert(1); opacity: .9; }
+.footer-logo { height: 58px; width: auto; margin-bottom: 14px; background: #fff; border-radius: 10px; padding: 8px 12px; }
 .footer-brand p { font-size: .95rem; }
 .footer-meta { font-size: .88rem; text-align: right; opacity: .85; }
 .footer-meta p { margin-bottom: 4px; }
+
+/* Sello discreto de la empresa desarrolladora */
+.footer-credit {
+  margin-top: 22px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.08);
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  opacity: .55; transition: opacity .25s;
+}
+.footer-credit:hover { opacity: .9; }
+.dev-logo {
+  height: 26px; width: auto; border-radius: 4px; background: #000; padding: 3px 5px; flex-shrink: 0;
+}
+.dev-text { color: #9aa8bf; font-size: .72rem; letter-spacing: .2px; }
+.dev-text strong { color: #c5d1e4; font-weight: 600; }
 
 /* ===== BACK TO TOP ===== */
 .back-to-top {
@@ -397,6 +439,64 @@ a.contact-link:hover { background: #e9eff7; transform: translateX(3px); }
 }
 .back-to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
+/* ===== ANIMACIONES ✨ ===== */
+
+/* Barra de progreso de lectura */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+  background: linear-gradient(90deg, var(--orange), var(--green), var(--teal));
+  z-index: 200; box-shadow: 0 0 10px rgba(246,146,30,.5);
+}
+
+/* Entrada del hero (escalonada) */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+.hero-org      { animation: fadeUp .7s .05s both; }
+.hero-title    { animation: fadeUp .8s .18s both; }
+.hero-sub      { animation: fadeUp .8s .34s both; }
+.hero-actions  { animation: fadeUp .8s .50s both; }
+.hero-cantones { animation: fadeUp .8s .66s both; }
+
+/* Cohete flotando */
+@keyframes floaty { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-18px) rotate(4deg); } }
+.deco-rocket { animation: floaty 6s ease-in-out infinite; }
+
+/* Brillo animado en el texto degradado */
+.hero-title .grad { background-size: 220% auto; animation: shine 6s linear infinite; }
+@keyframes shine { to { background-position: 220% center; } }
+
+/* Reveal al hacer scroll (gated por .anim: sin JS, nada se oculta) */
+.anim .reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+.anim .reveal.is-visible { opacity: 1; transform: none; }
+
+/* Pequeño zoom-in para tarjetas destacadas al revelarse */
+.anim .reveal.pop { transform: translateY(28px) scale(.96); }
+.anim .reveal.pop.is-visible { transform: none; }
+
+/* Latido suave del botón principal del hero */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 8px 20px rgba(246,146,30,.35); }
+  50%      { box-shadow: 0 8px 34px rgba(246,146,30,.65); }
+}
+.hero-actions .btn-primary { animation: pulseGlow 2.8s ease-in-out infinite; }
+
+/* Subrayado animado en el menú */
+.nav a { position: relative; }
+.nav a::after {
+  content: ""; position: absolute; left: 16px; right: 16px; bottom: 5px; height: 2px;
+  border-radius: 2px; background: var(--orange); transform: scaleX(0); transform-origin: left;
+  transition: transform .28s ease;
+}
+.nav a:hover::after { transform: scaleX(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim .reveal { opacity: 1 !important; transform: none !important; }
+  .scroll-progress { display: none; }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 980px) {
   .benefits-grid { grid-template-columns: repeat(2, 1fr); }
@@ -404,7 +504,7 @@ a.contact-link:hover { background: #e9eff7; transform: translateX(3px); }
   .members-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 900px) {
-  .que-grid, .cards-3, .feature-list, .junta-grid, .contact-card, .junta-stats, .members-grid { grid-template-columns: 1fr; }
+  .que-grid, .cards-3, .feature-list, .junta-grid, .contact-card, .junta-stats, .members-grid, .meaning-grid { grid-template-columns: 1fr; }
   .nav-toggle { display: flex; }
   .nav {
     position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch;
@@ -416,6 +516,8 @@ a.contact-link:hover { background: #e9eff7; transform: translateX(3px); }
   .nav a { padding: 13px 16px; }
   .nav .nav-cta { text-align: center; margin-top: 6px; }
   .footer-meta { text-align: left; }
+  .footer-credit { flex-direction: column; text-align: center; gap: 8px; }
+  .site-footer { padding-bottom: 88px; }
 }
 @media (max-width: 600px) {
   .benefits-grid, .steps { grid-template-columns: 1fr; }

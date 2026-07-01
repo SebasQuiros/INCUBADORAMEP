@@ -91,6 +91,57 @@
     });
   }
 
+  // --- Animaciones: barra de progreso + revelado al hacer scroll ✨ ---
+  document.documentElement.classList.add('anim');
+
+  // Barra de progreso de lectura
+  var progress = document.createElement('div');
+  progress.className = 'scroll-progress';
+  document.body.appendChild(progress);
+  function updateProgress() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (h > 0 ? (window.pageYOffset / h) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+
+  // Revelado al entrar en pantalla, con retardo escalonado por grupo
+  var revealSel = [
+    '.eyebrow', '.section-title', '.section-lead', '.students-sub', '.students-video-lead',
+    '.card', '.benefit', '.step', '.member', '.feature', '.mini-card', '.jstat',
+    '.who-chip', '.meaning-list li', '.meaning-logo', '.meaning-credits',
+    '.video-frame', '.video-wa-cta', '.contact-card', '.contact-write',
+    '.cta-band', '.junta-block', '.junta-members-title'
+  ].join(',');
+
+  var revealEls = document.querySelectorAll(revealSel);
+
+  if ('IntersectionObserver' in window && revealEls.length) {
+    var revObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          revObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(function (el) {
+      el.classList.add('reveal');
+      if (el.classList.contains('card') || el.classList.contains('benefit') ||
+          el.classList.contains('step') || el.classList.contains('member')) {
+        el.classList.add('pop');
+      }
+      // retardo escalonado según la posición entre hermanos que también se revelan
+      var sibs = Array.prototype.filter.call(el.parentNode.children, function (c) {
+        return c.classList && c.classList.contains('reveal');
+      });
+      var idx = sibs.indexOf(el);
+      if (idx > 0) el.style.transitionDelay = Math.min(idx * 70, 350) + 'ms';
+      revObs.observe(el);
+    });
+  }
+
   // --- Videos: reproducir solos (muted) al entrar en pantalla, pausar al salir ---
   var videos = document.querySelectorAll('.auto-video');
 
