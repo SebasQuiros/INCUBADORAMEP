@@ -502,7 +502,7 @@ a.contact-link:hover { background: #e9eff7; transform: translateX(3px); }
 /* ===== RESPONSIVE ===== */
 @media (max-width: 980px) {
   .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-  .steps { grid-template-columns: repeat(2, 1fr); }
+  .steps, .steps.steps-3 { grid-template-columns: repeat(2, 1fr); }
   .members-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 900px) {
@@ -522,7 +522,7 @@ a.contact-link:hover { background: #e9eff7; transform: translateX(3px); }
   .site-footer { padding-bottom: 88px; }
 }
 @media (max-width: 600px) {
-  .benefits-grid, .steps { grid-template-columns: 1fr; }
+  .benefits-grid, .steps, .steps.steps-3 { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
   .section { padding: 60px 0; }
