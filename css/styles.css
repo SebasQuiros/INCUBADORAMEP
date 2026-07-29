@@ -441,6 +441,54 @@ a.contact-link:hover { background: #e9eff7; transform: translateX(3px); }
 }
 .back-to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
+/* ===== CONVOCATORIA ===== */
+.section-convocatoria { background: linear-gradient(180deg, #ffffff 0%, var(--bg-alt) 100%); }
+
+.invite-videos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 6px 0 46px; }
+.invite-card {
+  height: 440px; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg);
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+  display: grid; place-items: center;
+}
+.invite-card video { width: 100%; height: 100%; object-fit: contain; display: block; background: transparent; }
+
+.conv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+.conv-block {
+  background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--orange);
+  border-radius: var(--radius); padding: 28px 30px; box-shadow: var(--shadow);
+}
+.conv-block h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 16px; }
+.conv-list { list-style: none; display: grid; gap: 12px; }
+.conv-list li { position: relative; padding-left: 32px; color: #404b5a; font-size: .98rem; }
+.conv-list li::before {
+  content: "✓"; position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--orange); color: #fff; font-size: .75rem; font-weight: 700; display: grid; place-items: center;
+}
+.conv-list strong { color: var(--navy); }
+
+.conv-deadline {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-bottom: 42px;
+  background: linear-gradient(120deg, var(--navy), var(--navy-2)); color: #fff;
+  border-radius: var(--radius); padding: 26px 32px;
+}
+.cd-date { display: flex; flex-direction: column; padding-right: 24px; border-right: 2px solid rgba(255,255,255,.2); }
+.cd-label { font-size: .78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--teal); }
+.cd-date strong { font-family: 'Poppins'; font-size: 1.5rem; color: #fff; }
+.conv-deadline p { flex: 1; min-width: 260px; color: #d7e0ee; font-size: .98rem; margin: 0; }
+.conv-deadline a { color: #fff; text-decoration: underline; }
+
+.conv-forms-title { font-family: 'Poppins'; font-size: 1.25rem; color: var(--navy); margin-bottom: 18px; }
+.conv-forms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.form-card {
+  display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--line);
+  border-radius: var(--radius-sm); padding: 18px 20px; box-shadow: var(--shadow);
+  transition: transform .15s, box-shadow .2s, border-color .15s; color: var(--ink);
+}
+.form-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--orange); }
+.form-ico { font-size: 1.8rem; flex-shrink: 0; }
+.form-txt strong { display: block; font-family: 'Poppins'; color: var(--navy); font-size: 1rem; }
+.form-txt small { color: var(--muted); font-size: .85rem; }
+
 /* ===== ANIMACIONES ✨ ===== */
 
 /* Barra de progreso de lectura */
@@ -506,7 +554,10 @@ a.contact-link:hover { background: #e9eff7; transform: translateX(3px); }
   .members-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 900px) {
-  .que-grid, .cards-3, .feature-list, .junta-grid, .contact-card, .junta-stats, .members-grid, .meaning-grid { grid-template-columns: 1fr; }
+  .que-grid, .cards-3, .feature-list, .junta-grid, .contact-card, .junta-stats, .members-grid, .meaning-grid, .conv-grid, .conv-forms { grid-template-columns: 1fr; }
+  .invite-videos { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .invite-card { height: 320px; }
+  .cd-date { border-right: 0; padding-right: 0; }
   .nav-toggle { display: flex; }
   .nav {
     position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: stretch;
@@ -523,6 +574,8 @@ a.contact-link:hover { background: #e9eff7; transform: translateX(3px); }
 }
 @media (max-width: 600px) {
   .benefits-grid, .steps, .steps.steps-3 { grid-template-columns: 1fr; }
+  .invite-videos { grid-template-columns: 1fr; gap: 18px; }
+  .invite-card { height: 70vh; max-height: 560px; }
 }
 @media (max-width: 560px) {
   .section { padding: 60px 0; }
