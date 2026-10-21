@@ -9,7 +9,7 @@
 
   <!-- Open Graph (para compartir en redes) -->
   <meta property="og:title" content="INEA — Incubadora de Negocios de Alajuela" />
-  <meta property="og:description" content="Aquí nacen las grandes ideas de nuestra región. Súmate como mentor(a), persona experta o emprendedor(a)." />
+  <meta property="og:description" content="Aquí nacen las grandes ideas de nuestra región. Súmese como mentor(a), persona experta o emprendedor(a)." />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,6 +18,36 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+
+  <!-- ===== ÍCONOS (sprite SVG, estilo línea institucional) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="ico-cap" viewBox="0 0 24 24"><path d="M2.5 9 12 5l9.5 4L12 13 2.5 9Z"/><path d="M6.5 11v3.8c0 1.2 2.6 2.4 5.5 2.4s5.5-1.2 5.5-2.4V11"/><path d="M21.5 9v4.2"/></symbol>
+    <symbol id="ico-tools" viewBox="0 0 24 24"><path d="M14.6 6.1a3.8 3.8 0 0 0-5 4.9L4.1 16.5 7.6 20l5.5-5.5a3.8 3.8 0 0 0 4.9-5l-2.4 2.4-2.4-.6-.6-2.4Z"/></symbol>
+    <symbol id="ico-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.9 7-11a7 7 0 1 0-14 0c0 5.1 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></symbol>
+    <symbol id="ico-rocket" viewBox="0 0 24 24"><path d="M9.2 15.2 8 14c1.8-6 6.7-9.2 11.8-9.2.2 5.1-3 10-9 11.8l-1.2-1.2"/><path d="M9.2 15.2c-1.3-.2-2.6.3-3.4 1.5-.6.9-.8 2.9-.8 2.9s2-.2 2.9-.8c1.2-.8 1.7-2.1 1.5-3.4"/><circle cx="14.5" cy="9.5" r="1.5"/></symbol>
+    <symbol id="ico-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-5.6 6-5.6s6 2.3 6 5.6"/><path d="M16.2 5a3.1 3.1 0 0 1 0 6"/><path d="M17.5 14.7c2 .6 3.5 2.4 3.5 4.6"/></symbol>
+    <symbol id="ico-book" viewBox="0 0 24 24"><path d="M12 6.5C10.3 5.2 7.8 4.5 5 4.5V18c2.8 0 5.3.7 7 2 1.7-1.3 4.2-2 7-2V4.5c-2.8 0-5.3.7-7 2Z"/><path d="M12 6.5V20"/></symbol>
+    <symbol id="ico-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8 7 10 4-2 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="ico-briefcase" viewBox="0 0 24 24"><rect x="3" y="7.5" width="18" height="12.5" rx="2"/><path d="M8.5 7.5V5.5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v2"/><path d="M3 12.5h18"/></symbol>
+    <symbol id="ico-network" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.3"/><circle cx="18" cy="6" r="2.3"/><circle cx="12" cy="18" r="2.3"/><path d="M8.3 6h7.4M7.6 7.8l3 8M16.4 7.8l-3 8"/></symbol>
+    <symbol id="ico-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.8"/><circle cx="12" cy="12" r="1.4"/></symbol>
+    <symbol id="ico-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.6 8.4-2 5.2-5.2 2 2-5.2 5.2-2Z"/></symbol>
+    <symbol id="ico-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.2 1 6.1L12 17.9 6.6 20l1-6.1L3.2 9.5l6.1-.9L12 3Z"/></symbol>
+    <symbol id="ico-mountain" viewBox="0 0 24 24"><path d="m2.5 20 6-11 3.5 6"/><path d="m11 20 4.5-8L21.5 20Z"/><path d="m7 12 1.5-1.5"/></symbol>
+    <symbol id="ico-volcano" viewBox="0 0 24 24"><path d="m3.5 20 5-8h7l5 8Z"/><path d="M10.5 12 9.5 4M13.5 12l1-8"/><path d="M12 2.5c-1 1 1 1.8 0 2.8"/></symbol>
+    <symbol id="ico-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 6.3-13 14-13 0 7.7-5.7 13-14 13Z"/><path d="M5 19c2.8-5 6-7.3 10-8.3"/></symbol>
+    <symbol id="ico-bulb" viewBox="0 0 24 24"><path d="M9.5 18h5"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.8 10.6c.8.7 1.3 1.4 1.3 2.4h5c0-1 .5-1.7 1.3-2.4A6 6 0 0 0 12 3Z"/></symbol>
+    <symbol id="ico-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5"/><path d="m8.5 13.3-1 7.7 4.5-2.6 4.5 2.6-1-7.7"/></symbol>
+    <symbol id="ico-scale" viewBox="0 0 24 24"><path d="M12 3.5v17"/><path d="M6.5 7h11"/><path d="M8 21h8"/><path d="M6.5 7 4 12.6a2.5 2.5 0 0 0 5 0L6.5 7Z"/><path d="m17.5 7 2.5 5.6a2.5 2.5 0 0 1-5 0L17.5 7Z"/></symbol>
+    <symbol id="ico-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.6 2.6 2.6 15.4 0 18M12 3c-2.6 2.6-2.6 15.4 0 18"/></symbol>
+    <symbol id="ico-phone" viewBox="0 0 24 24"><path d="M5 4h3.2l1.5 4.2-2 1.4a11.5 11.5 0 0 0 5.2 5.2l1.4-2 4.2 1.5V18a2 2 0 0 1-2.1 2A15.5 15.5 0 0 1 3 6.1 2 2 0 0 1 5 4Z"/></symbol>
+    <symbol id="ico-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></symbol>
+    <symbol id="ico-chat" viewBox="0 0 24 24"><path d="M4 5h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9l-4 3.5V16H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/></symbol>
+    <symbol id="ico-doc" viewBox="0 0 24 24"><path d="M7 3h7l4.5 4.5V21H7Z"/><path d="M14 3v4.5h4.5"/><path d="M9.5 13h5M9.5 16h5"/></symbol>
+    <symbol id="ico-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></symbol>
+    <symbol id="ico-chevron-up" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6"/></symbol>
+    <symbol id="ico-whatsapp" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.7 13.7L3 21l4.4-1.2A9 9 0 1 0 12 3Z"/><path d="M8.8 8.2c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.4l.6 1.5c.1.2 0 .3-.1.5l-.4.5c-.1.1-.2.3-.1.5.4.7 1.3 1.6 2.3 2 .2.1.3 0 .5-.1l.4-.5c.2-.2.3-.2.5-.1l1.5.7c.2.1.3.2.3.4 0 .8-.7 1.4-1.4 1.5-1.1.1-2.6-.3-4.4-1.9-1.6-1.5-2-3-2.1-4 0-.7.5-1.3.9-1.5Z"/></symbol>
+  </svg>
 
   <!-- ===== ENCABEZADO / NAV ===== -->
   <header class="site-header" id="top">
@@ -34,8 +64,8 @@
       <nav class="nav" id="navMenu" aria-label="Navegación principal">
         <a href="#estudiantes">Para estudiantes</a>
         <a href="#convocatoria">Convocatoria</a>
+        <a href="#jornada">Actividades</a>
         <a href="#que-es">¿Qué es?</a>
-        <a href="#mentor">Ser Mentor(a)</a>
         <a href="#junta">Junta</a>
         <a href="#contacto" class="nav-cta">Contacto</a>
       </nav>
@@ -105,9 +135,9 @@
         <div class="students-who">
           <h3 class="students-sub">¿Esto es para mí? Sí, si usted es…</h3>
           <div class="who-chips">
-            <span class="who-chip">🎓 Estudiante de Duodécimo o Tercer Nivel</span>
-            <span class="who-chip">🛠️ Egresado de CTP, IPEC</span>
-            <span class="who-chip">📍 De Alajuela, Poás, Grecia, Atenas, Orotina o San Mateo</span>
+            <span class="who-chip"><svg class="ico" aria-hidden="true"><use href="#ico-cap"/></svg>Estudiante de Duodécimo o Tercer Nivel</span>
+            <span class="who-chip"><svg class="ico" aria-hidden="true"><use href="#ico-tools"/></svg>Egresado de CTP, IPEC</span>
+            <span class="who-chip"><svg class="ico" aria-hidden="true"><use href="#ico-pin"/></svg>De Alajuela, Poás, Grecia, Atenas, Orotina o San Mateo</span>
           </div>
         </div>
 
@@ -115,32 +145,32 @@
         <h3 class="students-sub">Beneficios de ingresar al programa</h3>
         <div class="benefits-grid">
           <article class="benefit">
-            <div class="benefit-ico">🚀</div>
+            <div class="benefit-ico"><svg class="ico" aria-hidden="true"><use href="#ico-rocket"/></svg></div>
             <h4>Hace realidad su idea</h4>
             <p>Convierte un proyecto de clase o un sueño en un negocio que funciona.</p>
           </article>
           <article class="benefit">
-            <div class="benefit-ico">🧑‍🏫</div>
+            <div class="benefit-ico"><svg class="ico" aria-hidden="true"><use href="#ico-users"/></svg></div>
             <h4>Mentores que le guían</h4>
             <p>Empresarios con experiencia le acompañan paso a paso.</p>
           </article>
           <article class="benefit">
-            <div class="benefit-ico">📚</div>
+            <div class="benefit-ico"><svg class="ico" aria-hidden="true"><use href="#ico-book"/></svg></div>
             <h4>Capacitación práctica</h4>
             <p>Aprende a vender, manejar dinero y producir, con asistencia técnica real.</p>
           </article>
           <article class="benefit">
-            <div class="benefit-ico">🛡️</div>
+            <div class="benefit-ico"><svg class="ico" aria-hidden="true"><use href="#ico-shield"/></svg></div>
             <h4>Entorno seguro</h4>
             <p>Un espacio diseñado para aprender a gestionar los riesgos.</p>
           </article>
           <article class="benefit">
-            <div class="benefit-ico">💼</div>
+            <div class="benefit-ico"><svg class="ico" aria-hidden="true"><use href="#ico-briefcase"/></svg></div>
             <h4>Genera empleo</h4>
             <p>Se convierte en empresario joven y dinamiza la economía de su comunidad.</p>
           </article>
           <article class="benefit">
-            <div class="benefit-ico">🤝</div>
+            <div class="benefit-ico"><svg class="ico" aria-hidden="true"><use href="#ico-network"/></svg></div>
             <h4>Red de contactos</h4>
             <p>Conecta con otros emprendedores, expertos y aliados de la región.</p>
           </article>
@@ -172,15 +202,15 @@
         <div class="video-frame video-frame--portrait">
           <video class="auto-video" muted playsinline loop preload="metadata" controls>
             <source src="videos/requisitos.mp4" type="video/mp4" />
-            Tu navegador no soporta video.
+            Su navegador no soporta video.
           </video>
-          <span class="video-unmute" aria-hidden="true">🔇 Toque para activar el sonido</span>
+          <span class="video-unmute" aria-hidden="true">Toque para activar el sonido</span>
         </div>
 
         <div class="video-wa-cta">
           <p>¿Listo para postular? Escríbanos y le ayudamos con su proyecto.</p>
           <a class="btn btn-wa" data-wa-topic="postular" target="_blank" rel="noopener">
-            <span aria-hidden="true">🟢</span> Postular mi proyecto por WhatsApp
+            <svg class="ico" aria-hidden="true"><use href="#ico-whatsapp"/></svg> Postular mi proyecto por WhatsApp
           </a>
         </div>
 
@@ -237,8 +267,11 @@
         <!-- Fecha límite + contacto -->
         <div class="conv-deadline">
           <div class="cd-date">
-            <span class="cd-label">Fecha límite de recepción</span>
-            <strong>28 de agosto de 2026</strong>
+            <span class="cd-icon"><svg class="ico" aria-hidden="true"><use href="#ico-calendar"/></svg></span>
+            <span class="cd-date-txt">
+              <span class="cd-label">Fecha límite de recepción</span>
+              <strong>28 de agosto de 2026</strong>
+            </span>
           </div>
           <p>
             Envíe su propuesta al correo
@@ -252,18 +285,60 @@
         <h3 class="conv-forms-title">Descargue los formularios</h3>
         <div class="conv-forms">
           <a class="form-card" href="documentos/S2-Solicitud-de-admision.docx" download>
-            <span class="form-ico">📄</span>
+            <span class="form-ico"><svg class="ico" aria-hidden="true"><use href="#ico-doc"/></svg></span>
             <span class="form-txt"><strong>S2 · Solicitud de admisión</strong><small>Datos del proyecto y de los emprendedores</small></span>
           </a>
           <a class="form-card" href="documentos/S3-Descripcion-del-proyecto.docx" download>
-            <span class="form-ico">📄</span>
+            <span class="form-ico"><svg class="ico" aria-hidden="true"><use href="#ico-doc"/></svg></span>
             <span class="form-txt"><strong>S3 · Descripción del proyecto</strong><small>Idea, producto, mercado y ventajas</small></span>
           </a>
           <a class="form-card" href="documentos/S4-Curriculum-Vitae.docx" download>
-            <span class="form-ico">📄</span>
+            <span class="form-ico"><svg class="ico" aria-hidden="true"><use href="#ico-doc"/></svg></span>
             <span class="form-txt"><strong>S4 · Currículum Vitae</strong><small>Plantilla para cada emprendedor</small></span>
           </a>
         </div>
+      </div>
+    </section>
+
+    <!-- ===== EN ACCIÓN · JORNADA ELEVATOR PITCH (ULACIT) ===== -->
+    <section class="section section-news" id="jornada">
+      <div class="container">
+        <span class="eyebrow eyebrow-light">INEA en acción · 16 de octubre de 2026</span>
+        <h2 class="section-title">De las ideas a la acción</h2>
+        <p class="section-lead">
+          El talento emprendedor de la educación técnica de Alajuela fue protagonista en ULACIT.
+        </p>
+
+        <div class="news-body">
+          <p>
+            El pasado 16 de octubre de 2026, la Incubadora de Negocios de Alajuela (INEA) celebró su
+            primera jornada de <strong>Elevator Pitch</strong> en el auditorio de la Universidad
+            Latinoamericana de Ciencia y Tecnología (ULACIT).
+          </p>
+          <p>
+            La actividad reunió iniciativas emprendedoras de personas egresadas y estudiantes de
+            Colegios Técnicos Profesionales (CTP), tanto de las secciones diurnas como nocturnas de la
+            Dirección Regional de Educación de Alajuela (DREA).
+          </p>
+          <p>
+            Ante un Comité de Personas Expertas, las personas participantes presentaron y defendieron
+            sus propuestas de negocio, evidenciando creatividad, innovación, compromiso y potencial
+            emprendedor.
+          </p>
+          <p>
+            Más que una presentación, fue un encuentro entre la educación técnica, el talento y las
+            oportunidades reales de emprendimiento. Desde INEA reafirmamos nuestro compromiso de
+            transformar ideas en oportunidades y acercar el talento de nuestros CTP al ecosistema
+            empresarial costarricense.
+          </p>
+        </div>
+
+        <div class="news-videos">
+          <div class="news-video"><video src="videos/pitch1.mp4" controls playsinline preload="metadata"></video></div>
+          <div class="news-video"><video src="videos/pitch2.mp4" controls playsinline preload="metadata"></video></div>
+        </div>
+
+        <p class="news-tagline">INEA — Aquí nacen las grandes ideas de nuestra región.</p>
       </div>
     </section>
 
@@ -290,17 +365,17 @@
 
           <div class="que-cards">
             <article class="mini-card">
-              <div class="mini-ico">🎯</div>
+              <div class="mini-ico"><svg class="ico" aria-hidden="true"><use href="#ico-target"/></svg></div>
               <h3>Asistencia técnica y capacitación</h3>
               <p>Materializamos sus ideas en un entorno controlado y diseñado para el éxito.</p>
             </article>
             <article class="mini-card">
-              <div class="mini-ico">🤝</div>
+              <div class="mini-ico"><svg class="ico" aria-hidden="true"><use href="#ico-compass"/></svg></div>
               <h3>Acompañamiento estratégico</h3>
               <p>Guía constante en cada etapa del proceso de su proyecto.</p>
             </article>
             <article class="mini-card">
-              <div class="mini-ico">⭐</div>
+              <div class="mini-ico"><svg class="ico" aria-hidden="true"><use href="#ico-star"/></svg></div>
               <h3>Respaldo de alto nivel</h3>
               <p>Una Junta Administradora con mística, ética, equidad de género y dominio del ecosistema emprendedor.</p>
             </article>
@@ -327,28 +402,28 @@
 
           <ul class="meaning-list">
             <li>
-              <span class="meaning-ico">⛰️</span>
+              <span class="meaning-ico"><svg class="ico" aria-hidden="true"><use href="#ico-mountain"/></svg></span>
               <div>
                 <h4>Las montañas</h4>
                 <p>Simbolizan el relieve local, el arraigo y el entorno geográfico a espaldas de la institución.</p>
               </div>
             </li>
             <li>
-              <span class="meaning-ico">🌋</span>
+              <span class="meaning-ico"><svg class="ico" aria-hidden="true"><use href="#ico-volcano"/></svg></span>
               <div>
                 <h4>La fumarola</h4>
                 <p>Evoca al Volcán Poás como ícono de identidad, fuerza latente y energía transformadora.</p>
               </div>
             </li>
             <li>
-              <span class="meaning-ico meaning-ico--green">🌱</span>
+              <span class="meaning-ico meaning-ico--green"><svg class="ico" aria-hidden="true"><use href="#ico-leaf"/></svg></span>
               <div>
                 <h4>El color verde (I)</h4>
                 <p>Representa el compromiso con la sostenibilidad ambiental y el desarrollo ecológico.</p>
               </div>
             </li>
             <li>
-              <span class="meaning-ico meaning-ico--yellow">💡</span>
+              <span class="meaning-ico meaning-ico--yellow"><svg class="ico" aria-hidden="true"><use href="#ico-bulb"/></svg></span>
               <div>
                 <h4>El color amarillo (A)</h4>
                 <p>Simboliza el ingenio, el nacimiento de las ideas y la innovación empresarial.</p>
@@ -358,7 +433,7 @@
         </div>
 
         <p class="meaning-credits">
-          <span class="mc-star">🏅</span>
+          <span class="mc-star"><svg class="ico" aria-hidden="true"><use href="#ico-award"/></svg></span>
           <span>
             <strong>Agradecimiento especial</strong> por la elaboración del logo a
             <strong>Jorge Wilson Azofeifa Bolívar</strong>, profesor de Dibujo Técnico,
@@ -378,13 +453,12 @@
           Un vistazo a la Incubadora de Negocios de Alajuela y a las grandes ideas que nacen en nuestra región.
         </p>
 
-        <!-- El video arranca solo (sin sonido) al entrar en pantalla. Archivo: videos/inea.mp4 -->
         <div class="video-frame">
           <video class="auto-video" muted playsinline loop preload="metadata" controls>
             <source src="videos/inea.mp4" type="video/mp4" />
-            Tu navegador no soporta video.
+            Su navegador no soporta video.
           </video>
-          <span class="video-unmute" aria-hidden="true">🔇 Toque para activar el sonido</span>
+          <span class="video-unmute" aria-hidden="true">Toque para activar el sonido</span>
         </div>
       </div>
     </section>
@@ -400,12 +474,12 @@
 
         <div class="cards-3 cards-2">
           <article class="card">
-            <div class="card-ico">🎓</div>
+            <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#ico-cap"/></svg></div>
             <h3>Estudiantes de Duodécimo o Tercer Nivel</h3>
             <p>Estudiantes activos en ese nivel, con vocación emprendedora.</p>
           </article>
           <article class="card">
-            <div class="card-ico">🛠️</div>
+            <div class="card-ico"><svg class="ico" aria-hidden="true"><use href="#ico-tools"/></svg></div>
             <h3>Egresados de CTP, IPEC</h3>
             <p>Jóvenes con formación técnica que desean aplicar sus conocimientos en nuevas empresas productivas.</p>
           </article>
@@ -449,7 +523,7 @@
       </div>
     </section>
 
-    <!-- ===== JUNTA ASESORA (informativa) ===== -->
+    <!-- ===== JUNTA ADMINISTRADORA (informativa) ===== -->
     <section class="section section-dark" id="junta">
       <div class="container">
         <span class="eyebrow eyebrow-light">Respaldo de alto nivel</span>
@@ -484,9 +558,9 @@
         </div>
 
         <div class="junta-stats">
-          <div class="jstat"><span class="jstat-ico">⭐</span><div><strong>Mística y ética</strong><small>Valores que guían cada decisión</small></div></div>
-          <div class="jstat"><span class="jstat-ico">⚖️</span><div><strong>Equidad de género</strong><small>Una junta diversa y equilibrada</small></div></div>
-          <div class="jstat"><span class="jstat-ico">🌐</span><div><strong>Dominio del ecosistema</strong><small>Conocimiento real del mercado local</small></div></div>
+          <div class="jstat"><span class="jstat-ico"><svg class="ico" aria-hidden="true"><use href="#ico-star"/></svg></span><div><strong>Mística y ética</strong><small>Valores que guían cada decisión</small></div></div>
+          <div class="jstat"><span class="jstat-ico"><svg class="ico" aria-hidden="true"><use href="#ico-scale"/></svg></span><div><strong>Equidad de género</strong><small>Una junta diversa y equilibrada</small></div></div>
+          <div class="jstat"><span class="jstat-ico"><svg class="ico" aria-hidden="true"><use href="#ico-globe"/></svg></span><div><strong>Dominio del ecosistema</strong><small>Conocimiento real del mercado local</small></div></div>
         </div>
 
         <h3 class="junta-members-title">Está integrada por</h3>
@@ -544,10 +618,10 @@
           </div>
           <div class="contact-links">
             <a href="tel:+50671656006" class="contact-link">
-              <span class="ci">📞</span><span>7165-6006</span>
+              <span class="ci"><svg class="ico" aria-hidden="true"><use href="#ico-phone"/></svg></span><span>7165-6006</span>
             </a>
             <a href="mailto:nelson.campos.vega@mep.go.cr" class="contact-link">
-              <span class="ci">✉️</span><span>nelson.campos.vega@mep.go.cr</span>
+              <span class="ci"><svg class="ico" aria-hidden="true"><use href="#ico-mail"/></svg></span><span>nelson.campos.vega@mep.go.cr</span>
             </a>
           </div>
         </div>
@@ -556,16 +630,16 @@
         <div class="contact-write">
           <p class="cw-label">Escríbanos directamente. ¿Sobre qué desea consultar?</p>
           <div class="cw-options" id="cwOptions" role="group" aria-label="Tema de la consulta">
-            <button type="button" class="cw-opt is-active" data-topic="postular">🚀 Postular mi proyecto</button>
-            <button type="button" class="cw-opt" data-topic="mentor">🧑‍🏫 Ser mentor(a)</button>
-            <button type="button" class="cw-opt" data-topic="info">💬 Información general</button>
+            <button type="button" class="cw-opt is-active" data-topic="postular"><svg class="ico" aria-hidden="true"><use href="#ico-rocket"/></svg>Postular mi proyecto</button>
+            <button type="button" class="cw-opt" data-topic="mentor"><svg class="ico" aria-hidden="true"><use href="#ico-users"/></svg>Ser mentor(a)</button>
+            <button type="button" class="cw-opt" data-topic="info"><svg class="ico" aria-hidden="true"><use href="#ico-chat"/></svg>Información general</button>
           </div>
           <div class="cw-actions">
             <a id="waBtn" class="btn btn-wa" target="_blank" rel="noopener">
-              <span aria-hidden="true">🟢</span> Escribir por WhatsApp
+              <svg class="ico" aria-hidden="true"><use href="#ico-whatsapp"/></svg> Escribir por WhatsApp
             </a>
             <a id="mailBtn" class="btn btn-primary">
-              <span aria-hidden="true">✉️</span> Enviar correo
+              <svg class="ico" aria-hidden="true"><use href="#ico-mail"/></svg> Enviar correo
             </a>
           </div>
         </div>
@@ -597,7 +671,9 @@
     </div>
   </footer>
 
-  <a href="#top" class="back-to-top" id="backTop" aria-label="Volver arriba">↑</a>
+  <a href="#top" class="back-to-top" id="backTop" aria-label="Volver arriba">
+    <svg class="ico" aria-hidden="true"><use href="#ico-chevron-up"/></svg>
+  </a>
 
   <script src="js/main.js"></script>
 </body>

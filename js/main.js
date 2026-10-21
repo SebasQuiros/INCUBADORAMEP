@@ -97,7 +97,7 @@
     });
   }
 
-  // --- Animaciones: barra de progreso + revelado al hacer scroll ✨ ---
+  // --- Animaciones: barra de progreso + revelado al hacer scroll ---
   document.documentElement.classList.add('anim');
 
   // Barra de progreso de lectura
@@ -177,7 +177,7 @@
         v.muted = !v.muted;
         if (!v.muted && v.paused) v.play().catch(function () {});
         if (badge) {
-          badge.textContent = v.muted ? '🔇 Toque para activar el sonido' : '🔊 Sonido activado';
+          badge.textContent = v.muted ? 'Toque para activar el sonido' : 'Sonido activado';
           if (!v.muted) frame.classList.add('sound-on');
           else frame.classList.remove('sound-on');
         }
