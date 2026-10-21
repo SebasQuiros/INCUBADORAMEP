@@ -8,6 +8,53 @@
   window.addEventListener('load', function () { window.scrollTo(0, 0); });
   window.addEventListener('pageshow', function (e) { if (e.persisted) window.scrollTo(0, 0); });
 
+  // --- Aviso de cookies + aviso de entrada (jornada) ---
+  var COOKIE_KEY = 'inea_cookie_consent';
+  var JORNADA_KEY = 'inea_jornada_seen';
+  var cookieBar = document.getElementById('cookieBar');
+  var jornadaToast = document.getElementById('jornadaToast');
+
+  function showJornadaToast() {
+    if (!jornadaToast) return;
+    try { if (sessionStorage.getItem(JORNADA_KEY)) return; } catch (e) {}
+    jornadaToast.hidden = false;
+    setTimeout(function () { jornadaToast.classList.add('show'); }, 60);
+  }
+  function dismissJornadaToast() {
+    if (!jornadaToast) return;
+    jornadaToast.classList.remove('show');
+    try { sessionStorage.setItem(JORNADA_KEY, '1'); } catch (e) {}
+    setTimeout(function () { jornadaToast.hidden = true; }, 400);
+  }
+
+  var consent = null;
+  try { consent = localStorage.getItem(COOKIE_KEY); } catch (e) {}
+
+  if (cookieBar && !consent) {
+    cookieBar.hidden = false;
+    setTimeout(function () { cookieBar.classList.add('show'); }, 400);
+  } else {
+    setTimeout(showJornadaToast, 1500);
+  }
+
+  function closeCookie(val) {
+    try { localStorage.setItem(COOKIE_KEY, val); } catch (e) {}
+    if (cookieBar) {
+      cookieBar.classList.remove('show');
+      setTimeout(function () { cookieBar.hidden = true; }, 400);
+    }
+    setTimeout(showJornadaToast, 700);
+  }
+
+  var cookieAccept = document.getElementById('cookieAccept');
+  var cookieReject = document.getElementById('cookieReject');
+  var jtClose = document.getElementById('jtClose');
+  var jtGo = document.getElementById('jtGo');
+  if (cookieAccept) cookieAccept.addEventListener('click', function () { closeCookie('accepted'); });
+  if (cookieReject) cookieReject.addEventListener('click', function () { closeCookie('rejected'); });
+  if (jtClose) jtClose.addEventListener('click', dismissJornadaToast);
+  if (jtGo) jtGo.addEventListener('click', dismissJornadaToast);
+
   // --- Menú móvil ---
   var toggle = document.getElementById('navToggle');
   var menu = document.getElementById('navMenu');

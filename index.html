@@ -658,6 +658,7 @@
       <div class="footer-meta">
         <p>CTP Carrizal, Alajuela · Costa Rica</p>
         <p>© <span id="year"></span> INEA · MEP. Todos los derechos reservados.</p>
+        <p class="footer-privacy">Este sitio no recopila datos personales. Las postulaciones se envían desde su propio correo electrónico.</p>
       </div>
     </div>
 
@@ -674,6 +675,29 @@
   <a href="#top" class="back-to-top" id="backTop" aria-label="Volver arriba">
     <svg class="ico" aria-hidden="true"><use href="#ico-chevron-up"/></svg>
   </a>
+
+  <!-- ===== AVISO DE ENTRADA: JORNADA 16 DE OCTUBRE ===== -->
+  <aside class="jornada-toast" id="jornadaToast" role="dialog" aria-label="Novedad" hidden>
+    <button type="button" class="jt-close" id="jtClose" aria-label="Cerrar aviso">&times;</button>
+    <span class="jt-tag">Novedad · 16 de octubre de 2026</span>
+    <p class="jt-title">INEA celebró su primera jornada Elevator Pitch</p>
+    <p class="jt-text">El talento de los CTP de Alajuela brilló en ULACIT. Vea cómo fue.</p>
+    <a href="#jornada" class="btn btn-primary jt-btn" id="jtGo">Ver la jornada</a>
+  </aside>
+
+  <!-- ===== AVISO DE COOKIES ===== -->
+  <div class="cookie-bar" id="cookieBar" role="dialog" aria-label="Aviso de cookies" hidden>
+    <div class="container cookie-inner">
+      <p class="cookie-text">
+        Este sitio utiliza almacenamiento local únicamente para recordar sus preferencias y mejorar
+        su experiencia de navegación. No empleamos cookies de rastreo ni publicidad.
+      </p>
+      <div class="cookie-actions">
+        <button type="button" class="btn btn-outline-light" id="cookieReject">Rechazar</button>
+        <button type="button" class="btn btn-primary" id="cookieAccept">Aceptar</button>
+      </div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
